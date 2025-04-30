@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{classinfo['ClassName']}}</h1>
+
+<h3>Teacher</h3>
+<div class="teacher-list">
+    <a href="{{ url_for('teacher', teacherid=teacher['TeacherID']) }}" class="general-button">{{teacher['TeacherName']}}</a>
+</div>
+
+<h3>Students</h3>
+<div class="student-list">
+    {% for student in students %}
+    <a href="{{ url_for('student', studentid=student['StudentID']) }}" class="general-button">
+        {{ student['StudentName'] }}
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

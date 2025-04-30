@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{studentinfo['StudentName']}}</h1>
+
+<h3>Student</h3>
+<div>
+    Name: {{studentinfo['StudentName']}}
+</div>
+<div>
+    Group: {{studentinfo['GroupID']}}
+</div>
+
+<h3>Classes</h3>
+<div class="class-list">
+    {% for class in classes %}
+    <a href="{{ url_for('classlist', classid=class['ClassID']) }}" class="general-button">
+        {{ class['ClassName'] }} {{ class['PercentComplete'] }}% complete ({{ class['Comment'] }})
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

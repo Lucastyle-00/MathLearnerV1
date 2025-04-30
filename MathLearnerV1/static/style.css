@@ -1,0 +1,52 @@
+/* Body styles - main content container */
+body { 
+   font-family: Arial;           /* Default font for all text */
+   max-width: 800px;            /* Maximum page width */ 
+   margin: 0 auto;              /* Center content horizontally */
+   padding: 20px;               /* Space around content */
+   background-color: #E5F3FD;  /* Light Blue-Whitish background */
+}
+
+/* Topic grid layout */
+.teacher-list { 
+   display: grid;               /* Grid layout for topics */
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Responsive columns */
+   gap: 20px;                  /* Space between grid items */
+}
+
+/* Topic grid layout */
+.student-list { 
+   display: grid;               /* Grid layout for topics */
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Responsive columns */
+   gap: 20px;                  /* Space between grid items */
+}
+
+
+/* Individual topic button styling */
+.general-button { 
+   padding: 20px;              /* Space inside buttons */
+   background-color: #FF474C;  /* Light red background */
+   border-radius: 5px;         /* Rounded corners */
+   text-decoration: none;      /* Remove link underline */
+   color: black;               /* Black text */
+}
+
+/* Flashcard container styling */
+.flashcard { 
+   border: 1px solid #ccc;     /* Light gray border */
+   padding: 20px;              /* Space inside cards */
+   margin: 20px 0;             /* Space between cards */
+   cursor: pointer;            /* Hand cursor on hover */
+}
+
+/* Answer section styling (hidden by default) */
+.answer { 
+   display: none;              /* Hide answers initially */
+   margin-top: 20px;          /* Space above answer when shown */
+   border-top: 1px solid #eee; /* Light separator line */
+}
+
+/* Show answer when flashcard is active */
+.flashcard.active .answer { 
+   display: block;             /* Show answer when card clicked */
+}
